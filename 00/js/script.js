@@ -1,34 +1,21 @@
 'use strict';
 
-if (4 == 9) {
-	console.log('ok!');
+const login = prompt('Кто там?', '');
+
+if (login === 'Admin') {
+
+  const password = prompt('Введите пароль!', '');
+
+  if (password === 'Admin') {
+    console.log('Добро пожаловать');
+  } else if ( password === '' || password === null) {
+    console.log('Отменено');
+  } else {
+    console.log('Неверный пароль');
+  }
+
+} else if ( login === '' || login === null) {
+  console.log('Отменено');
 } else {
-	console.log('Error');
-}
-
-const num = 50;
-
-// if (num < 49) {
-// 	console.log('Error');
-// } else if (num > 100) {
-// 	console.log('Много');
-// } else {
-// 	console.log('Верно!');
-// }
-//
-// (num === 50) ? console.log('ok!') : console.log('Error');
-
-switch (num) {
-	case 49:
-		console.log('Error');
-		break;
-	case 100:
-		console.log('Error');
-		break;
-	case 50:
-		console.log('ok!');
-		break;
-	default:
-		console.log('Default!');
-		break;
+  console.log('Я вас не знаю');
 }
