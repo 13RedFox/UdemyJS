@@ -1,29 +1,23 @@
 'use strict';
 
-const box = document.getElementById('box');
-const btns = document.getElementsByTagName('button');
-const circle = document.getElementsByClassName('circle');
-const hearts = document.querySelectorAll('.heart');
-const oneHeart = document.querySelector('.heart');
-const wrapper = document.querySelector('.wrapper');
+const now = new Date();
 
-box.style.backgroundColor = 'blue';
-box.style.width = '500px';
-box.style.cssText = 'background-color: blue; width: 500px';
-btns[1].style.borderRadius = '100%';
-circle[0].style.backgroundColor = 'red';
+console.log(now);
 
-// for (let i = 0; i < hearts.length; i++) {
-// 	hearts[i].style.backgroundColor = 'blue';
-// }
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
 
-hearts.forEach(item => {
-	item.style.backgroundColor = 'red';
-});
+// console.log(now.getTimezoneOffset());
+// console.log(now.getTime());
 
-const div = document.createElement('div');
-// const text = document.createTextNode('Тут был я!');
+let start = new Date();
 
-div.classList.add('black');
-wrapper.prepend(div);
-hearts[0].replaceWith(circle[0]);
+for (let i = 0; i < 1000000; i++) {
+	let some = i ** 3;
+}
+
+let end = new Date();
+
+alert(`Цикл отработал за ${end - start} миллисекунд`);
